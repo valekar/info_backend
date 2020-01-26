@@ -4,3 +4,6 @@ export * from "./Comment";
 export * from "./Group";
 export * from "./Photo";
 export * from "./Post";
+export * from "./Course";
+export * from "./University";
+export * from "./Query";
