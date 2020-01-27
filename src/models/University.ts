@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 
 export interface IUniversity extends Document, IBase {
   title: string;
-  description: number;
+  description: string;
   categoryId: string;
   photos: [
     {
@@ -23,7 +23,7 @@ const universitySchema = new Schema({
     required: true
   },
   description: {
-    type: Number,
+    type: String,
     required: true
   },
   categoryId: ObjectId,

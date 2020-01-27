@@ -4,3 +4,6 @@ export * from "./CategoryDao";
 export * from "./CommentDao";
 export * from "./PhotoDao";
 export * from "./PostDao";
+export * from "./CourseDao";
+export * from "./UniversityDao";
+export * from "./QueryDao";

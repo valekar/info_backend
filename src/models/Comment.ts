@@ -3,6 +3,7 @@
  */
 import mongoose, { Document } from "mongoose";
 import { IBase } from "./Base";
+import { ObjectId } from "mongodb";
 
 const Schema = mongoose.Schema;
 
@@ -17,7 +18,7 @@ const commentSchema = new Schema({
     type: String
   },
   userId: {
-    type: String,
+    type: ObjectId,
     required: true
   },
   rating: {

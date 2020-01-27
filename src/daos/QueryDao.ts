@@ -4,6 +4,7 @@ import {
   DatabaseError,
   ResourceAlreadyExistsError
 } from "@errors";
+import { ICommentData, IPhotoData } from "@daos";
 
 export interface IQueryComment {
   queryId: String;
@@ -21,16 +22,6 @@ export interface IQueryPhoto {
   queryId: String;
   photo: IPhoto | null;
   photoId: String;
-}
-
-export interface ICommentData {
-  _id?: String;
-  comment: IComment | null;
-}
-
-export interface IPhotoData {
-  _id?: String;
-  photo: IPhoto | null;
 }
 
 export interface IAnswerData {
