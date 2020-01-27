@@ -4,16 +4,12 @@ import {
   DatabaseError,
   ResourceAlreadyExistsError
 } from "@errors";
+import { IPhotoData } from "@daos";
 
 export interface IUniversityPhoto {
-  UniversityId: String;
+  universityId: String;
   photo: IPhoto | null;
   photoId: String;
-}
-
-export interface IPhotoData {
-  _id?: String;
-  photo: IPhoto | null;
 }
 
 export interface IUniversityDao {
@@ -34,7 +30,7 @@ export class UniversityDao implements IUniversityDao {
   ): Promise<IPhotoData | null> {
     try {
       const university = await University.findById(
-        universityPhoto.UniversityId
+        universityPhoto.universityId
       );
       if (university != null) {
         university.photos.push({ photo: universityPhoto.photo });
@@ -56,7 +52,7 @@ export class UniversityDao implements IUniversityDao {
     try {
       const photo = await University.update(
         {
-          _id: universityPhoto.UniversityId
+          _id: universityPhoto.universityId
         },
         { $pull: { photos: { _id: universityPhoto.photoId } } }
       );

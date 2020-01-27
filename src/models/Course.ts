@@ -8,7 +8,7 @@ const Schema = mongoose.Schema;
 
 export interface ICourse extends Document, IBase {
   title: string;
-  description: number;
+  description: string;
   categoryId: string;
   faculties: [
     {
@@ -37,7 +37,7 @@ const courseSchema = new Schema({
     required: true
   },
   description: {
-    type: Number,
+    type: String,
     required: true
   },
   categoryId: ObjectId,

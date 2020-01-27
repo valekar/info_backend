@@ -7,6 +7,9 @@ import CommentRouter from "./Comment";
 import PhotoRouter from "./Photo";
 import PostRouter from "./Post";
 import FileRouter from "./FileHandler";
+import CourseRouter from "./Course";
+import QueryRouter from "./Query";
+import UniversityRouter from "./University";
 
 // Init router and path
 const router = Router();
@@ -20,6 +23,9 @@ router.use("/comments", CommentRouter);
 router.use("/photos", PhotoRouter);
 router.use("/posts", PostRouter);
 router.use("/files", FileRouter);
+router.use("/courses", CourseRouter);
+router.use("/queries", QueryRouter);
+router.use("/universities", UniversityRouter);
 
 // Export the base-router
 export default router;
