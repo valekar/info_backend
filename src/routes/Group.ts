@@ -27,7 +27,7 @@ router.get("/", adminMW, async (req: Request, res: Response) => {
  *                      Get a group - "GET /api/groups/:id"
  ******************************************************************************/
 
-router.get("/:id", async (req: Request, res: Response) => {
+router.get("/:id", adminMW, async (req: Request, res: Response) => {
   try {
     const { id } = req.params as ParamsDictionary;
     if (!id) {
