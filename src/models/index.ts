@@ -7,3 +7,4 @@ export * from "./Post";
 export * from "./Course";
 export * from "./University";
 export * from "./Query";
+export * from "./Follow";

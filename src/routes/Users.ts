@@ -28,7 +28,7 @@ router.get("/", adminMW, async (req: Request, res: Response) => {
  *                      Get an User - "GET /api/users/email"
  ******************************************************************************/
 
-router.get("/email", async (req: Request, res: Response) => {
+router.get("/email", adminMW, async (req: Request, res: Response) => {
   try {
     const { email } = req.query as ParamsDictionary;
     if (!email) {
@@ -50,7 +50,7 @@ router.get("/email", async (req: Request, res: Response) => {
  *                      Get an User - "GET /api/users/:id"
  ******************************************************************************/
 
-router.get("/:id", async (req: Request, res: Response) => {
+router.get("/:id", adminMW, async (req: Request, res: Response) => {
   try {
     const { id } = req.params as ParamsDictionary;
     if (!id) {

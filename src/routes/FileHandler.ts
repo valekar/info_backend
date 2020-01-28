@@ -98,7 +98,7 @@ router.get("/:filename", adminMW, async (req: Request, res: Response) => {
 /******************************************************************************
  *                      FILE - DELETE ONE /api/files/:filename
  ******************************************************************************/
-router.delete("/:id", async (req: Request, res: Response) => {
+router.delete("/:id", adminMW, async (req: Request, res: Response) => {
   try {
     const { id } = req.params as ParamsDictionary;
     if (!id) {
