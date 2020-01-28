@@ -23,7 +23,8 @@ const userSchema = new Schema({
     require: true
   },
   email: {
-    type: String
+    type: String,
+    unique: true
   },
   groups: [
     {
