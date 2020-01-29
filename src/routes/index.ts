@@ -11,6 +11,7 @@ import CourseRouter from "./Course";
 import QueryRouter from "./Query";
 import UniversityRouter from "./University";
 import FollowRouter from "./Follow";
+import NewsFeedRouter from "./NewsFeed";
 
 // Init router and path
 const router = Router();
@@ -28,6 +29,7 @@ router.use("/courses", CourseRouter);
 router.use("/queries", QueryRouter);
 router.use("/universities", UniversityRouter);
 router.use("/follow", FollowRouter);
+router.use("/feeds", NewsFeedRouter);
 
 // Export the base-router
 export default router;

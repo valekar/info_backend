@@ -8,3 +8,4 @@ export * from "./CourseDao";
 export * from "./UniversityDao";
 export * from "./QueryDao";
 export * from "./FollowDao";
+export * from "./NewsFeedDao";

@@ -8,3 +8,4 @@ export * from "./Course";
 export * from "./University";
 export * from "./Query";
 export * from "./Follow";
+export * from "./NewsFeed";
